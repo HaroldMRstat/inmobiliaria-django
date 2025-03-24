@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios - Inmobiliaria Merino</title>
+    <link rel="stylesheet" href="{% static 'web/styles.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'web/logo.png' %}" alt="Logo de la inmobiliaria" class="logo">
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'agentes' %}">Agentes</a></li>
+                <li><a href="{% url 'lista_propiedades' %}">Propiedades</a></li>
+                <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenedor">
+        <h1>Lo que dicen nuestros clientes</h1>
+        <div class="testimonio">
+            <p>"Gracias a Inmobiliaria Merino encontré la casa de mis sueños. ¡Excelente servicio!"</p>
+            <strong>- Ana Rodríguez</strong>
+        </div>
+        <div class="testimonio">
+            <p>"Profesionales y muy atentos. Me ayudaron a vender mi propiedad rápido y al mejor precio."</p>
+            <strong>- Carlos Méndez</strong>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Inmobiliaria Merino</p>
+        <a href="#">Política de privacidad</a>
+    </footer>
+</body>
+</html>

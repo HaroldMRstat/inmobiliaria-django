@@ -1,0 +1,137 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    width: auto;  /* Evita que se deforme */
+    height: 60px !important; /* Fuerza el tamaño en todas las páginas */
+    max-width: 100%; /* Evita que crezca demasiado */
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f4c430; /* Dorado */
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.formulario {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formulario h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    background: #f4c430;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d4a520;
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    transition: 0.3s;
+}
+
+.whatsapp img {
+    width: 100%;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* Informe de Power BI */
+.powerbi {
+    text-align: center;
+    padding: 50px;
+}
+
+.powerbi-frame {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+}

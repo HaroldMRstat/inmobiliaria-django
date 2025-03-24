@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades en Venta - Inmobiliaria Merino</title>
+    <link rel="stylesheet" href="{% static 'web/styles.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'web/logo.png' %}" alt="Logo de la inmobiliaria" class="logo">
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'agentes' %}">Agentes</a></li>
+                <li><a href="{% url 'testimonios' %}">Testimonios</a></li>
+                <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenedor">
+        <h1>Propiedades disponibles</h1>
+        {% for propiedad in propiedades %}
+            <div class="propiedad">
+                <img src="{{ propiedad.imagen.url }}" alt="Imagen de {{ propiedad.titulo }}">
+                <h2>{{ propiedad.titulo }}</h2>
+                <p>{{ propiedad.descripcion }}</p>
+                <p><strong>Precio:</strong> ${{ propiedad.precio }}</p>
+            </div>
+        {% empty %}
+            <p class="mensaje">No hay propiedades disponibles en este momento.</p>
+        {% endfor %}
+    </section>
+
+    <footer>
+        <p>© 2025 Inmobiliaria Merino</p>
+        <a href="#">Política de privacidad</a>
+    </footer>
+</body>
+</html>

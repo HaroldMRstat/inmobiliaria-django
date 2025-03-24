@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Agentes - Inmobiliaria Merino</title>
+    <link rel="stylesheet" href="{% static 'web/styles.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'web/logo.png' %}" alt="Logo de la inmobiliaria" class="logo">
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'lista_propiedades' %}">Propiedades</a></li>
+                <li><a href="{% url 'testimonios' %}">Testimonios</a></li>
+                <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contenedor">
+        <h1>Nuestros Agentes</h1>
+        <p>Conoce a nuestro equipo de expertos inmobiliarios.</p>
+        
+        <div class="lista-agentes">
+            <div class="agente">
+                <img src="{% static 'web/agente1.jpg' %}" alt="Agente 1">
+                <h2>Juan Pérez</h2>
+                <p>Especialista en ventas de propiedades residenciales.</p>
+            </div>
+            <div class="agente">
+                <img src="{% static 'web/agente2.jpg' %}" alt="Agente 2">
+                <h2>María Gómez</h2>
+                <p>Asesora en inversiones inmobiliarias y bienes raíces comerciales.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Inmobiliaria Merino</p>
+        <a href="#">Política de privacidad</a>
+    </footer>
+</body>
+</html>

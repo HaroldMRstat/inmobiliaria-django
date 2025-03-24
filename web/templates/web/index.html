@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria Merino</title>
+    <link rel="stylesheet" href="{% static 'web/styles.css' %}">
+</head>
+<body>
+
+    <!-- Fondo degradado -->
+    <div class="fondo-degradado">
+        
+        <header>
+            <img src="{% static 'web/logo.png' %}" alt="Logo de la inmobiliaria" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'agentes' %}">Agentes</a></li>
+                    <li><a href="{% url 'lista_propiedades' %}">Propiedades</a></li>
+                    <li><a href="{% url 'testimonios' %}">Testimonios</a></li>
+                    <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenedor principal -->
+        <main class="contenedor">
+            <section class="info">
+                <h1>INMOBILIARIA MERINO</h1>
+                <p>Tu nuevo aliado en el mundo inmobiliario. Con años de experiencia.</p>
+                <p>¿Quieres vender, comprar o alquilar una propiedad?</p>
+            </section>
+
+            <!-- Formulario flotante -->
+            <section class="formulario">
+                <h2>Contáctanos</h2>
+                <form>
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="celular">Celular *</label>
+                    <input type="tel" id="celular" name="celular" required>
+
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" name="dni">
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Contenedor para el informe de Power BI -->
+        <section class="powerbi">
+            <h2>Informe de Mercado Inmobiliario</h2>
+            <p>Aquí se mostrará un análisis detallado con datos actualizados.</p>
+            <div class="powerbi-frame">
+                <!-- Aquí se insertará el código del informe de Power BI -->
+            </div>
+        </section>
+
+        <!-- Botón flotante de WhatsApp -->
+        <a href="https://wa.me/51929424164" class="whatsapp" target="_blank">
+            <img src="{% static 'web/whatsapp.png' %}" alt="WhatsApp">
+        </a>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Inmobiliaria Merino | <a href="#">Política de privacidad</a></p>
+    </footer>
+
+</body>
+</html>
